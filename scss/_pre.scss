@@ -1,0 +1,81 @@
+$font-family-sans-serif: '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif; 
+
+// Bootstrap variables
+
+$white:    #FEFFFF !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #444444 !default;
+$gray-900: #2B3036 !default;
+$black:    rgba(0,0,0,.15) !default;
+
+$blue:    #1177d1 !default;
+$blue-message: #4f94cd !default;
+$blue-light: #86C2FF !default;
+$indigo:  #6610f2 !default;
+$purple:  #613d7c !default;
+$pink:    #e83e8c !default;
+$red:     #d9534f !default;
+$orange:  #f0ad4e !default;
+$yellow:  #ff7518 !default;
+$green:   #5cb85c !default;
+$teal:    #20c997 !default;
+$cyan:    #5bc0de !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-300 !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+// Options
+$enable-rounded: false !default;
+$card-border-radius: 3px !default;
+$card-border-radius-thick: 4px !default;
+
+// Body
+$body-color:    $gray-800 !default;
+
+// Fonts
+$font-size-base: 1.05rem !default;
+$headings-font-weight:   300 !default;
+
+// Navbar
+$navbar-dark-color:                 $gray-200 !default;
+$navbar-dark-hover-color:           rgba($white, 1) !default;
+$navbar-dark-background-hover-color: rgba(102,102,102,1) !default;
+$navbar-light-hover-color:          rgba($black, .9) !default;
+$dropdown-bg:                       rgba(87,87,87,1) !default;
+
+$fixed-header-y: 150px;
+
+// Breadcrumbs
+$breadcrumb-padding-y:              .25rem !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding:           .5rem !default;
+$breadcrumb-margin-bottom:          0 !default;
+$breadcrumb-bg:                     transparent !default;
+$breadcrumb-divider: "/" !default;
+$breadcrumb-divider-rtl: "/" !default;
+
+// Alerts
+$alert-border-width:                0 !default;
+
+$theme-colors: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    info: $info,
+    warning: $orange,
+    danger: $danger,
+    light: $gray-100,
+    dark: $gray-800
+);

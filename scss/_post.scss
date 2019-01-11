@@ -1,0 +1,1006 @@
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+ol li:last-child {
+    margin-bottom:10px;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+}
+
+.list-group-item[data-type="20"] {
+    display: none;
+    visibility: hidden;
+}
+.list-group-item[data-type="30"] {
+    display: none;
+     visibility: hidden;
+}
+.list-group-item[data-key="mycourses"] {
+    display: none;
+     visibility: hidden;
+}
+
+.list-group-item[data-key="home"] {
+    display: none;
+     visibility: hidden;
+}
+
+.page-context-header, .media {
+    display: flex;
+    align-items: center;
+}
+
+.media-body {
+    align-self: center;
+}
+
+.progress-chart-container, .m-b-1, .media-body>h4 {
+    margin-bottom:1rem;
+}
+
+.popover-header {
+    background-color: $navbar-dark-background-hover-color;
+    color: $navbar-dark-color;
+}
+
+.messaging-area-container {
+    textarea, input {
+        border: 1px solid $card-border-color;
+        border-radius: $card-border-radius;
+    }
+
+    .message .content {
+        border: 1px solid $card-border-color;
+        border-radius: $card-border-radius-thick;
+    }
+
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+}
+
+a.brand {
+    color: $navbar-dark-color;
+    margin-right:10px;
+    padding-right: 10px;
+}
+a.brand:hover {
+    text-decoration: none;
+    color:$white;
+}
+
+/*----- DASHBOARD --------------------------------------------*/
+
+#page-my-index {
+    .admininfos {
+        padding-bottom: 0;
+
+        .breadcrumb-button {
+            margin-right: 0 !important;
+        }
+    }
+
+    .bg-1 {
+        background-color: #1e88e5;
+    }
+
+    .bg-2 {
+        background-color: #7460ee;
+    }
+
+    .bg-3 {
+        background-color: #26c6da;
+    }
+
+    .bg-4 {
+        background-color: #2f3d4a;
+    }
+
+    .small-box {
+        border-radius: $card-border-radius;
+        position: relative;
+        display: block;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .small-box > .inner {
+        padding: 10px;
+    }
+
+    .small-box h3,
+    .small-box p {
+        z-index: 5;
+        color: #fff;
+    }
+
+    .small-box h3 {
+        margin: 0 0 10px 0;
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    .small-box .icon {
+        -webkit-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        transition: all .3s linear;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        z-index: 0;
+        font-size: 48px;
+        color: rgba(0, 0, 0, 0.15);
+    }
+
+    .progress-chart-container .no-progress {
+        background-color: $brand-primary;
+
+        .fa {
+            color: #fff;
+            font-size: 42px;
+            padding: 14px 8px;
+        }
+    }
+}
+
+
+/*----- CARDS, BLOCKS, BUTTONS --------------------------------*/
+
+.card {
+    border-radius: $card-border-radius;
+    background-color: $white;
+}
+
+.close { 
+    color:$gray-800;
+    transform: rotate(0deg);
+    transition: transform 1s;
+    outline: none;
+}
+
+.close:hover { 
+    color:$gray-800;
+    transform: rotate(90deg);
+    transition: transform 1s;
+    outline: none;
+}
+
+.preferences-container .preference-table {
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+}
+
+.forumpost {
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+
+    .header {
+        margin-top: .5em;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: .8em;
+
+        background-color: $gray-100;
+        padding: 3px;
+        border: 1px solid $gray-400;
+        border-radius: $card-border-radius;
+
+
+    }
+
+    .author {
+        font-style: italic;
+    }
+}
+
+.forum-tags::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f02c";
+    margin-right:5px;
+}
+
+#page-mod-forum-discuss .discussioncontrols .form-inline input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.custom-select {
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:hover{
+    border-radius: $card-border-radius $card-border-radius 0px 0px;
+}
+
+.nav-pills .nav-link.active {
+    border-radius: $card-border-radius;
+}
+
+.btn, .form-control {
+     border-radius: $card-border-radius;
+}
+
+.btn-outline-secondary {
+    color:$gray-800;
+}
+
+button[data-action="new-event-button"]::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f067";
+    margin-right:3px;
+}
+
+button[data-action="new-event-button"] {
+    margin-top:25px;
+    margin-bottom: 25px;
+    background-color: $blue;
+    border-color: $blue;
+    color:$navbar-dark-color;
+}
+
+.clickable {
+    cursor: copy;
+}
+
+.path-calendar .calendartable {
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+    border-collapse: separate !important;
+}
+.path-calendar .maincalendar .calendarmonth {
+    .header {
+        background-color: $navbar-dark-background-hover-color;
+        color: $navbar-dark-color;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 20px;
+        padding: 7px 0;
+        text-transform: uppercase;
+    }
+    thead tr  {
+        border-radius: $card-border-radius $card-border-radius 0px 0px;
+        border-style: solid;
+        th {
+            border-style: solid;
+        }
+    }
+    tbody td {
+        border: $gray-300;
+        background-color: $gray-100;
+    }
+    ul {
+        li {
+            margin-bottom: 3px;
+            padding: 8px 2px 0 4px;
+            text-decoration: none;
+
+            > a {
+                color: $blue;
+
+                &:hover {
+                    color: $blue;
+                }
+
+                .icon {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+.path-calendar .maincalendar .calendarmonth .clickable:hover {
+    box-shadow: none;
+    background-color: $gray-400;
+}
+
+.block .minicalendar th {
+    font-size: .69em;
+}
+
+.path-calendar .maincalendar .calendar_event_category:hover a,
+.path-calendar .maincalendar .calendar_event_course:hover a,
+.path-calendar .maincalendar .calendar_event_site:hover a,
+.path-calendar .maincalendar .calendar_event_group:hover a,
+.path-calendar .maincalendar .calendar_event_user:hover a {
+    color: $blue;
+}
+
+span.editinstructions {
+    color:$navbar-dark-color;
+    background-color: $dropdown-bg;
+    border-radius: $card-border-radius $card-border-radius 0px 0px;
+}
+
+.moodle-dialogue {
+    z-index:10000;
+}
+
+.popover-region-container {
+    color:$navbar-dark-color;
+    background-color: $dropdown-bg;
+    border:1px solid $black;
+}
+
+.popover-region-footer-container {
+    background-color:$dropdown-bg;
+    border-top: 1px solid $navbar-dark-background-hover-color;
+}
+
+.popover-region-header-container {
+    background-color:$dropdown-bg;
+    border-bottom: 1px solid $navbar-dark-background-hover-color;
+}
+
+a.see-all-link, a.see-all-link:hover  {
+    text-decoration: none;
+}
+
+.navbar .popover-region-container {
+    top:50px;
+    border-radius: $card-border-radius 0px $card-border-radius $card-border-radius;
+}
+
+.popover-region-footer-container:hover {
+    background-color:$navbar-dark-background-hover-color;
+}
+
+.popover-region-footer-container > div {
+    color:$navbar-dark-color;
+    text-decoration: none;
+}
+
+.popover-region-footer-container > div::after {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f105";
+    padding-left:5px;
+    opacity: 0;
+    transition: opacity 1.5s, padding-left 1.5s;
+}
+
+.popover-region-footer-container > div:hover:after {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f105";
+    padding-left:10px;
+    opacity: 1;
+    transition: opacity 1.5s, padding-left 1.5s;
+}
+
+.popover-region-header-actions > .newmessage-link > a {
+    color:$navbar-dark-color;
+}
+
+.popover-region-header-actions > .newmessage-link > a::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f0e0";
+    margin-right:5px;
+}
+
+.popover-region-header-actions > .newmessage-link > a:hover {
+    color:$white;
+    text-decoration: none;
+}
+
+//message divider
+.content-item-container {
+    background-color:$dropdown-bg;
+    border-bottom: 1px solid $navbar-dark-background-hover-color;
+}
+
+.content-item-container.unread {
+    background-color:$dropdown-bg;
+    border-bottom: 1px solid $navbar-dark-background-hover-color;
+}
+.content-item-container:hover {
+    background-color:$navbar-dark-background-hover-color;
+    color:$navbar-dark-color;
+}
+
+.popover-region-messages .content-item {
+    margin-top:5px;
+}
+
+.modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content {
+    border-radius: $card-border-radius;
+}
+
+.usermenu .login a {
+    color:$navbar-dark-color;
+}
+
+.usermenu .login a::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f090";
+    margin-right:5px;
+}
+
+.usermenu .login a:hover {
+    text-decoration: none;
+    color:$white;
+
+}
+
+.messaging-area-container .messaging-area .messages-area .messages .message .content {
+    font-size: $font-size-sm;
+}
+.messaging-area-container .messaging-area .messages-area .messages .message .content.right .timesent {
+    color:$white;
+}
+
+
+div.message.d-flex.row-fluid > div.content.right {
+    background-color: $blue-message;
+    .text {
+        color:$white;
+    }
+    .timesent {
+        font-style: italic;
+    }
+    
+}
+
+div.message.d-flex.row-fluid > div.content.left {
+    background-color: $gray-100;
+
+    .timesent {
+        font-style: italic;
+    }
+
+}
+
+/*.mycoursesmenu > li > a::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f05a";
+    float:left;
+}*/
+
+/*----- DARK NAVBAR, DRAWER, MENUS and BANNER---------*/
+
+#action-menu-1-menubar, #action-menu-1-menubar > div {
+    width:75px;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+    width:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.bg-dark {
+    background-color: rgba(68,68,68, 1) !important;
+}
+.navbar .nav-link, .navbar .dropdown-toggle {
+    color:$navbar-dark-color;
+    margin-right:15px;
+}
+.navbar .nav-link:hover, .navbar .dropdown-toggle#hover {
+    color:$navbar-dark-hover-color;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: $dropdown-bg;
+}
+
+.navbar .popover-region {
+    height:50px;
+}
+
+.navbar .popover-region-toggle {
+    padding-top: 12px;
+}
+.navbar .popover-region-toggle:focus {
+    
+}
+
+.dropdown-item {
+    color:$navbar-dark-color;
+    background-color: $dropdown-bg;
+}
+.dropdown-item a {
+    color:$navbar-dark-color;
+}
+.dropdown-item a:hover {
+    text-decoration: none;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    color:$navbar-dark-color;
+    background-color:$navbar-dark-background-hover-color;
+}
+.dropdown-menu {
+    border-radius: 0px $card-border-radius $card-border-radius $card-border-radius;
+}
+.dropdown-menu-right {
+    border-radius: $card-border-radius 0px $card-border-radius $card-border-radius;
+}
+
+
+.dropdown-divider {
+    border-top:1px solid $navbar-dark-background-hover-color;
+}
+
+.usermenu {
+}
+
+.message-drawer a, .message-drawer .btn-link {
+    color: $navbar-dark-color;
+}
+
+[data-region="view-overview"] {
+    padding-bottom: 0 !important;
+} 
+
+[data-region="message"] {
+    color: $gray-900;
+}
+
+[data-region="view-overview"] .section .card-header, [data-region="view-overview"] .section .lazy-load-list {
+    background-color: $dropdown-bg;
+    color:$navbar-dark-color;
+}
+
+[data-region="view-overview"] .section .card-header:hover {
+    background-color: $navbar-dark-background-hover-color;
+}
+
+[data-region="view-conversation"] {
+    background-color: $dropdown-bg;
+    color:$navbar-dark-color;
+}
+
+[data-region="contacts-container"] {
+    background-color: $dropdown-bg;
+    color:$navbar-dark-color;
+}
+
+[data-region="view-overview"] .section .border-bottom {
+    border-bottom: 1px solid $gray-700 !important;
+}
+
+.message-drawer .body-container {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+[data-region="header-edit-mode"] .close {
+    color: $navbar-dark-color;
+}
+
+[data-region="message-drawer"] {
+    height: calc(100% - 145px);
+}
+
+[data-region="message-drawer"] .border-bottom {
+    border-bottom: 1px solid $gray-700 !important;
+}
+
+[data-region="footer-container"] .border-top {
+    border-bottom: 1px solid $gray-700 !important;
+}
+
+[data-region="drawer"], [data-region="message-drawer"] {
+    top:145px;
+
+    /*background-color: $gray-900;*/
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    /*background-image: linear-gradient(to right, #868f96 0%, #596164 100%);*/
+}
+
+[data-region="message-drawer"] > .footer-container {
+     background-color: $dropdown-bg;
+    color:$navbar-dark-color;
+}
+
+[data-region="message-drawer"] .content-container {
+     background-color: $dropdown-bg;
+    color:$navbar-dark-color;
+}
+
+[data-region="content-container"] .list-group-item {
+     background-color: $dropdown-bg;
+    color:$navbar-dark-color;
+}
+
+[data-region="empty-message-container"], [data-region="view-contacts"] {
+    color:$navbar-dark-color;
+}
+
+[data-region="send-message-txt"] {
+    background-color: $navbar-dark-color !important;
+    color: $navbar-dark-background-hover-color;
+    border: 1px solid $gray-700;
+    border-radius: $card-border-radius;
+}
+
+[data-region="day-container"] > h6 {
+   color:$navbar-dark-color;
+}
+
+[data-region="view-settings"] {
+   color:$navbar-dark-color;
+}
+
+[data-region="view-contact"] h2 {
+   color:$navbar-dark-color;
+}
+
+.message-drawer .btn.btn-link.btn-icon:hover, .message-drawer .btn.btn-link.btn-icon:focus {
+    color: $dropdown-bg;
+    background-color: $navbar-dark-color;
+}
+
+#nav-drawer a.list-group-item:first-child  {
+    border-radius: $card-border-radius $card-border-radius 0px 0px;
+}
+
+#nav-drawer a.list-group-item:last-child, [data-key="privatefiles"]  {
+    border-radius: 0px 0px $card-border-radius $card-border-radius;
+}
+
+#nav-drawer a.list-group-item:only-child  {
+    border-radius: $card-border-radius;
+}
+
+#nav-drawer a.list-group-item {
+    color:$navbar-dark-color;
+    background-color: $dropdown-bg;
+}
+
+#nav-drawer a.list-group-item:hover {
+    color:$navbar-dark-color;
+    background-color:$navbar-dark-background-hover-color;
+}
+
+#nav-drawer .list-group-item.active, #nav-drawer a.list-group-item:active {
+    color:$navbar-dark-color;
+    background-color:$blue !important;
+
+}
+
+h1.site-name { 
+    margin: 0px;
+    height: 45px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    font-weight: $font-weight-bold;
+}
+
+h1.site-name > a { 
+    color:$navbar-dark-color;
+    text-decoration: none;
+}
+
+h1.site-name > a:hover { 
+    color:$white;
+    text-decoration: none;
+}
+
+#page { 
+    margin-top: 149px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*background-color: $gray-100;*/
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+
+.lec-toggle {
+    background-color: $gray-800;
+    color: $navbar-dark-color;
+    border-radius: 50%;
+    border-style:none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.lec-toggle:focus {
+    
+}
+
+[data-region="drawer-toggle"] {
+    color: $navbar-dark-color;
+    cursor: pointer;
+}
+
+.lec-brand {
+    /*background-color: $gray-900;*/
+     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    height:95px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    color: $navbar-dark-color;
+}
+[data-region="drawer-toggle"]:hover {
+    color:$white;
+}
+.lec-brand > a > span > img {
+    max-height: 95px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 20px;
+}
+
+.context-header-settings-menu {
+    background-color: $dropdown-bg;
+    border-radius: $card-border-radius-thick;
+    height: 35px;
+}
+
+.moodle-actionmenu, .section_action_menu, #region-main-settings-menu > div {
+    background-color: $dropdown-bg;
+    border-radius: $card-border-radius-thick;
+    //height: 30px;
+}
+
+.block .block-controls .action-menu-trigger {
+    background-color: $dropdown-bg;
+    border-radius: $card-border-radius-thick;
+    //height: 30px;
+}
+
+.block .block-controls .dropdown-toggle {
+    color:$navbar-dark-color;
+    padding-top:3px;
+    padding-right:3px;
+    padding-left: 5px;
+}
+
+a.dropdown-toggle {
+    color:$navbar-dark-color;
+    padding-top:0px;
+    padding-right:3px;
+    padding-left: 5px;
+    padding-bottom: 0px;
+}
+
+.action-menu-item a:first-of-type > .icon {
+    color: $white;
+    padding-top: 6px;
+}
+
+a[aria-label="User menu"] {
+    margin-top: 0px;
+}
+
+div[aria-labelledby="courseMenu"] > a[title="Dashboard"] {
+    font-style: italic;
+    border-bottom: 1px solid $navbar-dark-background-hover-color;
+}
+
+div.context-header-settings-menu {
+    height: 26px;
+}
+
+
+/******** COURSE *********************************/
+
+
+//Course summary section
+.course-content ul.topics li.section .summary {
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+//Label indent
+.section .label .mod-indent-outer {
+    padding-left: 0px;
+}
+
+//activity description
+.section .activity .contentafterlink {
+    font-size: $font-size-sm;
+
+    margin-top: .5em;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: .8em;
+
+    background-color: $gray-100;
+    padding: 3px;
+    border: 1px solid $gray-400;
+    border-radius: $card-border-radius;
+    text-decoration: italic;
+
+}
+
+.section .activity .contentafterlink>div {
+    margin-left:17px;
+}
+
+.section .activity div.contentafterlink > div > div {
+    font-style: italic;
+}
+
+.section .activity .contentafterlink::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f05a";
+    float:left;
+}
+
+/*********************************************/
+
+.filemanager-container,
+.filepicker-filelist {
+    @extend .border;
+}
+
+.navbar .userpicture {
+    height:36px;
+}
+.userpicture {
+    border-radius: 50%;
+    border: 1px none $gray-200;
+    transition: border 1s;
+}
+.userpicture:hover {
+    border-radius: 50%;
+    border: 2px solid $gray-400;
+    transition: border 1s;
+}
+
+/***************** TO make old Moodle pages work ********************/
+div#staffdev > ul {
+  display: -webkit-flex;
+    display: flex;
+     -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    padding: 0;
+    margin-top:15px;
+    margin-bottom:0px;
+    margin-right:20px;
+    list-style-type: none;
+
+}
+div#staffdev > ul> li { 
+    line-height: 1.22em; font-size: 12pt;
+    width:200px;
+    max-width: 200px;
+    flex-grow:1;
+    color: black;
+    text-align: center;
+    align-self: flex-start; 
+    margin-left: 8px; 
+    margin-right: 8px;
+    margin-top:10px;
+}
+div#staffdev > ul> li:last-child {
+  margin-right:0;
+}
+div#staffdev > ul> li a { 
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    max-width: 220px;
+}
+div#staffdev > ul> li a > span { 
+    text-transform: none;
+}
+div#staffdev > ul> li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+div#staffdev > ul> li a:hover:after {
+    width: 100%;
+    background: black;
+}
+
+.staffportal-head {
+  text-align: center; margin-top: 50px; margin-left: auto; margin-right: auto; font-family: '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif; line-height: 1.22em; font-size: 36pt;
+}
+.staffportal-p {
+ line-height: 1.22em; font-size: 18pt;
+}
+.center-txt {
+  text-align: center;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ab_links {
+    cursor: pointer; color: #ee3300;
+}
+.ab_links:hover {
+    text-decoration:underline;
+}
+.expand_image_link {
+    cursor:pointer; 
+}
+.my_tabs ul {
+    margin:0px; padding:0px; display:inline-block;  
+}
+.my_tabs li {
+    display:inline-block;
+    margin:0px; padding:0px;
+}
+.usertext { 
+  display:none;
+}
+
+.spot-container {
+    height:120px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-scrolling: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-flex: 1;
+    font-size: 0; //stupid patch for inline-block spacing  stupidity
+    padding-bottom: 10px;
+
+    &:hover, &:focus {
+        overflow-x: auto;
+        margin-bottom: 0px;
+    }
+  
+    .spot {
+        max-width:200px;
+        position:relative;
+        display:inline-block;
+        border:2px solid blue;
+        margin:0 10px 0 0;
+    }
+
+    .card-img-overlay {
+        padding:0.25rem;
+    }
+
+    .card-text {
+        position:absolute;
+        bottom:0px;
+        padding:0;
+        margin:0;
+    }
+}
+
+
+
+
+/* H5P regression fix for editor https://moodle.org/mod/forum/discuss.php?d=347602#p1402801 */
+@media (min-width:544px) {
+    .form-inline .form-control-static {
+        display: block!important;
+    }
+}
+/* End H5P */

@@ -1,0 +1,14 @@
+//import custom pre main
+@import "pre";
+
+// Import FontAwesome from boost.
+@import "../../boost/scss/fontawesome";
+
+// Import All of Bootstrap from boost
+@import "../../boost/scss/bootstrap";
+
+// Import Core moodle CSS from boost
+@import "../../boost/scss/moodle";
+
+//import custom post main
+@import "post";

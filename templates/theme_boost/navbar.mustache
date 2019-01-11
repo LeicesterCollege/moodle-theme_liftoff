@@ -1,0 +1,70 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page navbar.
+}}
+<div class="container-fluid fixed-top">
+    <div class="row-fluid lec-brand">
+        <a href="{{{ config.wwwroot }}}" class="lec-logo d-none d-sm-inline">
+          
+                <span class="logo d-none d-sm-inline">
+                    <img src="{{output.get_logo_url}}" alt="{{sitename}}">
+                </span>
+          
+
+        </a>
+        <h1 class="site-name nav-link d-none d-inline-block"><a href="{{{ config.wwwroot }}}">{{{ sitename }}}</a></h1>
+    </div>
+    <div class="row-fluid">
+        <nav class="navbar navbar-dark bg-dark navbar-expand moodle-has-zindex">
+
+
+                <!--<a class="brand mr-3" href="{{{ config.wwwroot }}}?redirect=0" title="Site Home">
+                    <i class="icon fa fa-tachometer fa-fw"></i> Dashboard
+                </a>-->
+
+                <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                    <a aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" role="button" class="nav-link lec-toggle float-sm-left mr-1 " data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="fa fa-bars"></i> Menu<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></a>
+                </div>
+
+                <ul class="nav nav-pills mr-auto mycoursesmenu">
+                    <!-- custom_menu -->
+                    {{{ output.render_my_courses }}}
+                    <!-- page_heading_menu -->
+                    {{{ output.page_heading_menu }}}
+                </ul>
+                
+                <ul class="nav navbar-nav ml-auto">
+                    <div class="d-none d-lg-block">
+                    {{{ output.search_box }}}
+                    </div>
+
+                    <!-- navbar_plugin_output -->
+                    <li class="nav-item">
+                    {{{ output.navbar_plugin_output }}}
+                    </li>
+
+                    <!-- user_menu -->
+                    <li class="nav-item d-flex align-items-center">
+                        {{{ output.user_menu }}}
+                    </li>
+                </ul>
+                <!-- search_box -->
+        </nav>
+    </div>
+</div>
+
