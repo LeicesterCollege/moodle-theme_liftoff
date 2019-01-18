@@ -7,6 +7,10 @@ ol li:last-child {
     margin-bottom:10px;
 }
 
+.navbar-dark a .icon {
+    color: $navbar-dark-text-color;
+}
+
 .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;
@@ -48,8 +52,8 @@ ol li:last-child {
 }
 
 .popover-header {
-    background-color: $navbar-dark-background-hover-color;
-    color: $navbar-dark-color;
+    background-color: $navbar-dark-background-hover-shade;
+    color: $navbar-dark-text-color;
 }
 
 .messaging-area-container {
@@ -68,7 +72,7 @@ ol li:last-child {
 }
 
 a.brand {
-    color: $navbar-dark-color;
+    color: $navbar-dark-text-color;
     margin-right:10px;
     padding-right: 10px;
 }
@@ -245,9 +249,14 @@ button[data-action="new-event-button"]::before {
 button[data-action="new-event-button"] {
     margin-top:25px;
     margin-bottom: 25px;
-    background-color: $blue;
-    border-color: $blue;
-    color:$navbar-dark-color;
+    background-color: $primary;
+    border-color: $primary;
+    color:$navbar-dark-text-color;
+
+    &:hover {
+        background-color: darken($primary, 5%);
+        color:$navbar-dark-text-color;
+    }
 }
 
 .clickable {
@@ -261,8 +270,8 @@ button[data-action="new-event-button"] {
 }
 .path-calendar .maincalendar .calendarmonth {
     .header {
-        background-color: $navbar-dark-background-hover-color;
-        color: $navbar-dark-color;
+        background-color: $navbar-dark-background-hover-shade;
+        color: $navbar-dark-text-color;
         font-size: 1.2rem;
         font-weight: 300;
         line-height: 20px;
@@ -318,8 +327,8 @@ button[data-action="new-event-button"] {
 }
 
 span.editinstructions {
-    color:$navbar-dark-color;
-    background-color: $dropdown-bg;
+    color:$navbar-dark-text-color;
+    background-color: $dropdown-background-shade;
     border-radius: $card-border-radius $card-border-radius 0px 0px;
 }
 
@@ -328,19 +337,19 @@ span.editinstructions {
 }
 
 .popover-region-container {
-    color:$navbar-dark-color;
-    background-color: $dropdown-bg;
+    color:$navbar-dark-text-color;
+    background-color: $dropdown-background-shade;
     border:1px solid $black;
 }
 
 .popover-region-footer-container {
-    background-color:$dropdown-bg;
-    border-top: 1px solid $navbar-dark-background-hover-color;
+    background-color:$dropdown-background-shade;
+    border-top: 1px solid $navbar-dark-background-hover-shade;
 }
 
 .popover-region-header-container {
-    background-color:$dropdown-bg;
-    border-bottom: 1px solid $navbar-dark-background-hover-color;
+    background-color:$dropdown-background-shade;
+    border-bottom: 1px solid $navbar-dark-background-hover-shade;
 }
 
 a.see-all-link, a.see-all-link:hover  {
@@ -353,11 +362,11 @@ a.see-all-link, a.see-all-link:hover  {
 }
 
 .popover-region-footer-container:hover {
-    background-color:$navbar-dark-background-hover-color;
+    background-color:$navbar-dark-background-hover-shade;
 }
 
 .popover-region-footer-container > div {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
     text-decoration: none;
 }
 
@@ -380,7 +389,7 @@ a.see-all-link, a.see-all-link:hover  {
 }
 
 .popover-region-header-actions > .newmessage-link > a {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
 }
 
 .popover-region-header-actions > .newmessage-link > a::before {
@@ -397,17 +406,17 @@ a.see-all-link, a.see-all-link:hover  {
 
 //message divider
 .content-item-container {
-    background-color:$dropdown-bg;
-    border-bottom: 1px solid $navbar-dark-background-hover-color;
+    background-color:$dropdown-background-shade;
+    border-bottom: 1px solid $navbar-dark-background-hover-shade;
 }
 
 .content-item-container.unread {
-    background-color:$dropdown-bg;
-    border-bottom: 1px solid $navbar-dark-background-hover-color;
+    background-color:$dropdown-background-shade;
+    border-bottom: 1px solid $navbar-dark-background-hover-shade;
 }
 .content-item-container:hover {
-    background-color:$navbar-dark-background-hover-color;
-    color:$navbar-dark-color;
+    background-color:$navbar-dark-background-hover-shade;
+    color:$navbar-dark-text-color;
 }
 
 .popover-region-messages .content-item {
@@ -419,7 +428,7 @@ a.see-all-link, a.see-all-link:hover  {
 }
 
 .usermenu .login a {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
 }
 
 .usermenu .login a::before {
@@ -486,15 +495,15 @@ div.message.d-flex.row-fluid > div.content.left {
     background-color: rgba(68,68,68, 1) !important;
 }
 .navbar .nav-link, .navbar .dropdown-toggle {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
     margin-right:15px;
 }
 .navbar .nav-link:hover, .navbar .dropdown-toggle#hover {
-    color:$navbar-dark-hover-color;
+    color:$navbar-dark-hover-text-color;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: $dropdown-bg;
+    background-color: $dropdown-background-shade;
 }
 
 .navbar .popover-region {
@@ -508,22 +517,23 @@ div.message.d-flex.row-fluid > div.content.left {
     
 }
 
-.dropdown-item {
-    color:$navbar-dark-color;
-    background-color: $dropdown-bg;
+.dropdown-item, .dropdown-item[data-title="mymoodle,admin"] {
+    color:$navbar-dark-text-color;
+    background-color: $dropdown-background-shade;
 }
 .dropdown-item a {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
 }
 .dropdown-item a:hover {
     text-decoration: none;
 }
-.dropdown-item:hover, .dropdown-item:focus {
-    color:$navbar-dark-color;
-    background-color:$navbar-dark-background-hover-color;
+.dropdown-item:hover {
+    color:$navbar-dark-text-color;
+    background-color:$navbar-dark-background-hover-shade;
 }
 .dropdown-menu {
     border-radius: 0px $card-border-radius $card-border-radius $card-border-radius;
+    background-color: $dropdown-background-shade;
 }
 .dropdown-menu-right {
     border-radius: $card-border-radius 0px $card-border-radius $card-border-radius;
@@ -531,14 +541,14 @@ div.message.d-flex.row-fluid > div.content.left {
 
 
 .dropdown-divider {
-    border-top:1px solid $navbar-dark-background-hover-color;
+    border-top:1px solid $navbar-dark-background-hover-shade;
 }
 
 .usermenu {
 }
 
 .message-drawer a, .message-drawer .btn-link {
-    color: $navbar-dark-color;
+    color: $navbar-dark-text-color;
 }
 
 [data-region="view-overview"] {
@@ -550,22 +560,22 @@ div.message.d-flex.row-fluid > div.content.left {
 }
 
 [data-region="view-overview"] .section .card-header, [data-region="view-overview"] .section .lazy-load-list {
-    background-color: $dropdown-bg;
-    color:$navbar-dark-color;
+    background-color: $dropdown-background-shade;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="view-overview"] .section .card-header:hover {
-    background-color: $navbar-dark-background-hover-color;
+    background-color: $navbar-dark-background-hover-shade;
 }
 
 [data-region="view-conversation"] {
-    background-color: $dropdown-bg;
-    color:$navbar-dark-color;
+    background-color: $dropdown-background-shade;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="contacts-container"] {
-    background-color: $dropdown-bg;
-    color:$navbar-dark-color;
+    background-color: $dropdown-background-shade;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="view-overview"] .section .border-bottom {
@@ -573,15 +583,15 @@ div.message.d-flex.row-fluid > div.content.left {
 }
 
 .message-drawer .body-container {
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: $darkgrad;
 }
 
 [data-region="header-edit-mode"] .close {
-    color: $navbar-dark-color;
+    color: $navbar-dark-text-color;
 }
 
 [data-region="message-drawer"] {
-    height: calc(100% - 145px);
+    height: calc(100% - 55px);
 }
 
 [data-region="message-drawer"] .border-bottom {
@@ -593,54 +603,53 @@ div.message.d-flex.row-fluid > div.content.left {
 }
 
 [data-region="drawer"], [data-region="message-drawer"] {
-    top:145px;
-
+    top:55px;
     /*background-color: $gray-900;*/
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: $darkgrad;
     /*background-image: linear-gradient(to right, #868f96 0%, #596164 100%);*/
 }
 
 [data-region="message-drawer"] > .footer-container {
-     background-color: $dropdown-bg;
-    color:$navbar-dark-color;
+     background-color: $dropdown-background-shade;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="message-drawer"] .content-container {
-     background-color: $dropdown-bg;
-    color:$navbar-dark-color;
+     background-color: $dropdown-background-shade;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="content-container"] .list-group-item {
-     background-color: $dropdown-bg;
-    color:$navbar-dark-color;
+     background-color: $dropdown-background-shade;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="empty-message-container"], [data-region="view-contacts"] {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
 }
 
 [data-region="send-message-txt"] {
-    background-color: $navbar-dark-color !important;
-    color: $navbar-dark-background-hover-color;
+    background-color: $navbar-dark-text-color !important;
+    color: $navbar-dark-background-hover-shade;
     border: 1px solid $gray-700;
     border-radius: $card-border-radius;
 }
 
 [data-region="day-container"] > h6 {
-   color:$navbar-dark-color;
+   color:$navbar-dark-text-color;
 }
 
 [data-region="view-settings"] {
-   color:$navbar-dark-color;
+   color:$navbar-dark-text-color;
 }
 
 [data-region="view-contact"] h2 {
-   color:$navbar-dark-color;
+   color:$navbar-dark-text-color;
 }
 
-.message-drawer .btn.btn-link.btn-icon:hover, .message-drawer .btn.btn-link.btn-icon:focus {
-    color: $dropdown-bg;
-    background-color: $navbar-dark-color;
+.message-drawer .btn.btn-link.btn-icon:hover, .message-drawer  {
+    color: $dropdown-background-shade;
+    background-color: $navbar-dark-text-color;
 }
 
 #nav-drawer a.list-group-item:first-child  {
@@ -656,18 +665,24 @@ div.message.d-flex.row-fluid > div.content.left {
 }
 
 #nav-drawer a.list-group-item {
-    color:$navbar-dark-color;
-    background-color: $dropdown-bg;
+    color:$navbar-dark-text-color;
+    background-color: $dropdown-background-shade;
 }
 
 #nav-drawer a.list-group-item:hover {
-    color:$navbar-dark-color;
-    background-color:$navbar-dark-background-hover-color;
+    color:$navbar-dark-text-color;
+    background-color:$navbar-dark-background-hover-shade;
 }
 
-#nav-drawer .list-group-item.active, #nav-drawer a.list-group-item:active {
-    color:$navbar-dark-color;
-    background-color:$blue !important;
+#nav-drawer .list-group-item.active {
+    color:$navbar-dark-text-color;
+    background-color:$primary !important;
+    border-bottom: 3px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-image-source: $orangegrad;
+    border-image-slice: 1;
 
 }
 
@@ -680,7 +695,7 @@ h1.site-name {
 }
 
 h1.site-name > a { 
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
     text-decoration: none;
 }
 
@@ -690,17 +705,32 @@ h1.site-name > a:hover {
 }
 
 #page { 
-    margin-top: 149px;
+    margin-top: 58px;
     padding-left: 20px;
     padding-right: 20px;
     /*background-color: $gray-100;*/
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
+.search-input-form > input {
+    background-color: $navbar-dark-background-hover-shade;
+    color:$navbar-dark-hover-text-color;
+    border-color: $navbar-dark-text-color;
+
+    &:focus {
+        background-color: $navbar-dark-background-hover-shade;
+        color:$navbar-dark-hover-text-color;
+        border-color: $navbar-dark-hover-text-color;
+    }
+
+    .form-control:focus {
+        box-shadow:none;
+    }
+}
 
 .lec-toggle {
     background-color: $gray-800;
-    color: $navbar-dark-color;
+    color: $navbar-dark-text-color;
     border-radius: 50%;
     border-style:none;
     padding-left: 10px;
@@ -713,8 +743,14 @@ h1.site-name > a:hover {
     
 }
 
+.lec-course-menu {
+    column-count: 2;
+    column-rule-style: solid;
+    column-rule: 1px solid $navbar-dark-background-hover-shade;
+}
+
 [data-region="drawer-toggle"] {
-    color: $navbar-dark-color;
+    color: $navbar-dark-text-color;
     cursor: pointer;
 }
 
@@ -727,7 +763,16 @@ h1.site-name > a:hover {
     justify-content: flex-start;
     position: relative;
     cursor: pointer;
-    color: $navbar-dark-color;
+    color: $navbar-dark-text-color;
+}
+
+.lec-navbar {
+
+    text-align: center;
+    padding-bottom:5px;
+    background: $orangegrad left bottom no-repeat; 
+    background-size:100% 5px;
+
 }
 [data-region="drawer-toggle"]:hover {
     color:$white;
@@ -739,35 +784,40 @@ h1.site-name > a:hover {
     margin-left: 20px;
 }
 
+div.context-header-settings-menu {
+    margin-left:10px;
+    height: 35px;
+    padding-top:4px;
+}
 .context-header-settings-menu {
-    background-color: $dropdown-bg;
+    background-color: $dropdown-background-shade;
     border-radius: $card-border-radius-thick;
     height: 35px;
 }
 
 .moodle-actionmenu, .section_action_menu, #region-main-settings-menu > div {
-    background-color: $dropdown-bg;
+    background-color: $dropdown-background-shade;
     border-radius: $card-border-radius-thick;
     //height: 30px;
 }
 
 .block .block-controls .action-menu-trigger {
-    background-color: $dropdown-bg;
+    background-color: $dropdown-background-shade;
     border-radius: $card-border-radius-thick;
     //height: 30px;
 }
 
 .block .block-controls .dropdown-toggle {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
     padding-top:3px;
-    padding-right:3px;
+    padding-right:5px;
     padding-left: 5px;
 }
 
 a.dropdown-toggle {
-    color:$navbar-dark-color;
+    color:$navbar-dark-text-color;
     padding-top:0px;
-    padding-right:3px;
+    padding-right:5px;
     padding-left: 5px;
     padding-bottom: 0px;
 }
@@ -782,14 +832,19 @@ a[aria-label="User menu"] {
 }
 
 div[aria-labelledby="courseMenu"] > a[title="Dashboard"] {
-    font-style: italic;
-    border-bottom: 1px solid $navbar-dark-background-hover-color;
+    border-bottom: 1px solid $navbar-dark-background-hover-shade;
+    &::before {
+        font-family: "FontAwesome";
+        font-weight: 400;
+        content: "\f0e4";
+        float:left;
+        padding-right: 6px;
+    }
 }
 
-div.context-header-settings-menu {
-    height: 26px;
+.search-input-wrapper {
+    padding-top:6px;
 }
-
 
 /******** COURSE *********************************/
 
