@@ -20,6 +20,10 @@ ol li:last-child {
   }
 }
 
+.switch input + label::before {
+    background-color: $gray-500;
+}
+
 .list-group-item[data-type="20"] {
     display: none;
     visibility: hidden;
@@ -79,80 +83,6 @@ a.brand {
 a.brand:hover {
     text-decoration: none;
     color:$white;
-}
-
-/*----- DASHBOARD --------------------------------------------*/
-
-#page-my-index {
-    .admininfos {
-        padding-bottom: 0;
-
-        .breadcrumb-button {
-            margin-right: 0 !important;
-        }
-    }
-
-    .bg-1 {
-        background-color: #1e88e5;
-    }
-
-    .bg-2 {
-        background-color: #7460ee;
-    }
-
-    .bg-3 {
-        background-color: #26c6da;
-    }
-
-    .bg-4 {
-        background-color: #2f3d4a;
-    }
-
-    .small-box {
-        border-radius: $card-border-radius;
-        position: relative;
-        display: block;
-        margin-bottom: 20px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    }
-
-    .small-box > .inner {
-        padding: 10px;
-    }
-
-    .small-box h3,
-    .small-box p {
-        z-index: 5;
-        color: #fff;
-    }
-
-    .small-box h3 {
-        margin: 0 0 10px 0;
-        white-space: nowrap;
-        padding: 0;
-    }
-
-    .small-box .icon {
-        -webkit-transition: all .3s linear;
-        -o-transition: all .3s linear;
-        transition: all .3s linear;
-        position: absolute;
-        top: 0;
-        right: 40px;
-        z-index: 0;
-        font-size: 48px;
-        color: rgba(0, 0, 0, 0.15);
-    }
-
-    .progress-chart-container .no-progress {
-        background-color: $brand-primary;
-
-        .fa {
-            color: #fff;
-            font-size: 42px;
-            padding: 14px 8px;
-        }
-    }
 }
 
 
@@ -472,13 +402,6 @@ div.message.d-flex.row-fluid > div.content.left {
 
 }
 
-/*.mycoursesmenu > li > a::before {
-    font-family: "FontAwesome";
-    font-weight: 400;
-    content: "\f05a";
-    float:left;
-}*/
-
 /*----- DARK NAVBAR, DRAWER, MENUS and BANNER---------*/
 
 #action-menu-1-menubar, #action-menu-1-menubar > div {
@@ -513,11 +436,8 @@ div.message.d-flex.row-fluid > div.content.left {
 .navbar .popover-region-toggle {
     padding-top: 12px;
 }
-.navbar .popover-region-toggle:focus {
-    
-}
 
-.dropdown-item, .dropdown-item[data-title="mymoodle,admin"] {
+.dropdown-item, .dropdown-item[data-title="mymoodle,admin"], .dropdown-item:focus {
     color:$navbar-dark-text-color;
     background-color: $dropdown-background-shade;
 }
@@ -530,7 +450,18 @@ div.message.d-flex.row-fluid > div.content.left {
 .dropdown-item:hover {
     color:$navbar-dark-text-color;
     background-color:$navbar-dark-background-hover-shade;
+    border-color: $navbar-dark-background-hover-shade;
 }
+
+.dropdown-item.active, .dropdown-item.active:hover {
+    border-bottom: 3px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-image-source: $orangegrad;
+    border-image-slice: 1;
+}
+
 .dropdown-menu {
     border-radius: 0px $card-border-radius $card-border-radius $card-border-radius;
     background-color: $dropdown-background-shade;
@@ -604,9 +535,7 @@ div.message.d-flex.row-fluid > div.content.left {
 
 [data-region="drawer"], [data-region="message-drawer"] {
     top:55px;
-    /*background-color: $gray-900;*/
     background-image: $darkgrad;
-    /*background-image: linear-gradient(to right, #868f96 0%, #596164 100%);*/
 }
 
 [data-region="message-drawer"] > .footer-container {
@@ -708,7 +637,6 @@ h1.site-name > a:hover {
     margin-top: 58px;
     padding-left: 20px;
     padding-right: 20px;
-    /*background-color: $gray-100;*/
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
@@ -716,11 +644,18 @@ h1.site-name > a:hover {
     background-color: $navbar-dark-background-hover-shade;
     color:$navbar-dark-hover-text-color;
     border-color: $navbar-dark-text-color;
+    box-shadow:none;
 
     &:focus {
         background-color: $navbar-dark-background-hover-shade;
         color:$navbar-dark-hover-text-color;
         border-color: $navbar-dark-hover-text-color;
+        box-shadow:none;
+    }
+
+    &::placeholder {
+        color:$navbar-dark-hover-text-color;
+        font-style: italic;
     }
 
     .form-control:focus {
@@ -729,18 +664,14 @@ h1.site-name > a:hover {
 }
 
 .lec-toggle {
-    background-color: $gray-800;
+    //background-color: $navbar-dark-background-hover-shade;
     color: $navbar-dark-text-color;
-    border-radius: 50%;
+    //border-radius: 50%;
     border-style:none;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 6px;
     padding-bottom: 6px;
-}
-
-.lec-toggle:focus {
-    
 }
 
 .lec-course-menu {
@@ -755,8 +686,7 @@ h1.site-name > a:hover {
 }
 
 .lec-brand {
-    /*background-color: $gray-900;*/
-     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: $orangegrad;
     height:95px;
     display: flex;
     flex-flow: row nowrap;
@@ -767,16 +697,17 @@ h1.site-name > a:hover {
 }
 
 .lec-navbar {
-
     text-align: center;
     padding-bottom:5px;
     background: $orangegrad left bottom no-repeat; 
     background-size:100% 5px;
 
 }
+
 [data-region="drawer-toggle"]:hover {
     color:$white;
 }
+
 .lec-brand > a > span > img {
     max-height: 95px;
     padding-top: 9px;
@@ -798,13 +729,11 @@ div.context-header-settings-menu {
 .moodle-actionmenu, .section_action_menu, #region-main-settings-menu > div {
     background-color: $dropdown-background-shade;
     border-radius: $card-border-radius-thick;
-    //height: 30px;
 }
 
 .block .block-controls .action-menu-trigger {
     background-color: $dropdown-background-shade;
     border-radius: $card-border-radius-thick;
-    //height: 30px;
 }
 
 .block .block-controls .dropdown-toggle {
@@ -870,7 +799,7 @@ div[aria-labelledby="courseMenu"] > a[title="Dashboard"] {
     margin-bottom: .8em;
 
     background-color: $gray-100;
-    padding: 3px;
+    padding: 6px;
     border: 1px solid $gray-400;
     border-radius: $card-border-radius;
     text-decoration: italic;
