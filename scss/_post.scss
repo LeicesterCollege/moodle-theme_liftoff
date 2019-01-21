@@ -8,12 +8,32 @@ ol li:last-child {
 }
 
 .card-columns {
+ @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
   @include media-breakpoint-only(lg) {
-    column-count: 4;
+    column-count: 3;
   }
   @include media-breakpoint-only(xl) {
     column-count: 4;
   }
+}
+
+.lec-dashboard-card {
+    min-width:33%;
+}
+
+.card-img { 
+    max-height:120px;
+}
+
+.card-img-overlay .lec-card-title {
+    background-color: rgba($white, 0.4);
+    border-radius: $card-border-radius-thick;
+    padding:4px 0px 4px 4px;
 }
 
 .switch input + label::before {
@@ -33,10 +53,10 @@ ol li:last-child {
      visibility: hidden;
 }
 
-.list-group-item[data-key="home"] {
-    display: none;
-     visibility: hidden;
-}
+// .list-group-item[data-key="home"] {
+//     display: none;
+//      visibility: hidden;
+// }
 
 .page-context-header, .media {
     display: flex;
