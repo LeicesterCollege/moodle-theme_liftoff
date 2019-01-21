@@ -7,10 +7,6 @@ ol li:last-child {
     margin-bottom:10px;
 }
 
-.navbar-dark a .icon {
-    color: $navbar-dark-text-color;
-}
-
 .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;
@@ -357,6 +353,10 @@ a.see-all-link, a.see-all-link:hover  {
     border-radius: $card-border-radius;
 }
 
+.usermenu .login {
+    color: $gray-200;
+}
+
 .usermenu .login a {
     color:$navbar-dark-text-color;
 }
@@ -663,6 +663,19 @@ h1.site-name > a:hover {
     }
 }
 
+.lec-login-header {
+    background-color: $dark; 
+}
+
+.lec-login-bg {
+    background-color: $dropdown-background-shade;
+    background-image: none !important;
+}
+
+.lec-login-card {
+    border: none !important;
+}
+
 .lec-toggle {
     //background-color: $navbar-dark-background-hover-shade;
     color: $navbar-dark-text-color;
@@ -749,6 +762,14 @@ a.dropdown-toggle {
     padding-right:5px;
     padding-left: 5px;
     padding-bottom: 0px;
+}
+
+.navbar-dark a .icon, .navbar-dark .navbar-nav .nav-link {
+    color: $navbar-dark-text-color !important;
+
+    &:hover {
+        color: $navbar-dark-hover-text-color !important;
+    }
 }
 
 .action-menu-item a:first-of-type > .icon {
