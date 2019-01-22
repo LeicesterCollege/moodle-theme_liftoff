@@ -39,7 +39,16 @@ $dark:          $gray-800 !default;
 // Custom Gradients
 
 $orangegrad: linear-gradient(to right,#ef3300 0%,#f77416 30%,#f7892a 56%,#f4520c 83%,#d22904 100%) !default;
-$darkgrad: linear-gradient(60deg, #29323c 0%, #485563 100%) !default;
+//$darkgrad: linear-gradient(60deg, #29323c 0%, #485563 100%) !default; //grey blue
+//$darkgrad: linear-gradient(60deg, #042A3B 0%, #485563 100%) !default; //green
+//$darkgrad: linear-gradient(60deg, #042A3B 0%, #042A48 100%) !default; //blue
+//$darkgrad: linear-gradient(60deg, #525252 0%, #3d72b4 100%) !default; //light blue
+//$darkgrad: linear-gradient(60deg, #360033 0%, #0b8793 100%) !default; //purple
+//$darkgrad: linear-gradient(60deg, #485563 0%, #29323c 100%) !default; //grey blue 2
+//$darkgrad: linear-gradient(60deg, #7474bf 0%, #348ac7 100%) !default; //stellar
+//$darkgrad: linear-gradient(60deg, #16222a 0%, #3a6073 100%) !default; //mirage
+$darkgrad: linear-gradient(60deg, #0f2027 0%, #203a43 50%, #2c5364 100%) !default; //moonlight
+
 
 // Options
 $enable-rounded: false !default;
