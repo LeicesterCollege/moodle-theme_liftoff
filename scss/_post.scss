@@ -26,6 +26,15 @@ ol li:last-child {
     min-width:33%;
 }
 
+.lec-dashboard-header {
+    border-radius: $card-border-radius;
+    border: 1px solid $card-black;
+    background-color: $white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px 0px 10px 0px;
+}
+
 .card-img { 
     max-height:120px;
 }

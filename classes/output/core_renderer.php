@@ -82,4 +82,17 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $content;
     }
 
+    /**
+     * Wrapper for dhashboard header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function dashboard_header() {
+        global $PAGE;
+
+        $header = new stdClass();
+        $header->pageheadingbutton = $this->page_heading_button();
+        return $this->render_from_template('theme_liftoff/dashboard_header', $header);
+    }
+
 }
