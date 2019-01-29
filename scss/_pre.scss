@@ -13,6 +13,13 @@ $gray-900: #2B3036 !default;
 $black:    rgba(0,0,0,.15) !default;
 $card-black: rgba(0,0,0,.125) !default;
 
+$lcblue: rgba(0, 154, 200, 1) !default;
+$lclightblue: rgba(116, 201, 227, 1) !default;
+$lcturq: rgba(0, 154, 155, 1) !default;
+$lcpurple: rgba(109,28,116,1) !default;
+$lclightpurple: rgba(171,70,181,1) !default ;
+$lcgreen: rgba(124,157,0, 1) !default;
+$lclightgreen: rgba(149,193,31,1) !default;
 $blue:    #1177d1 !default;
 $blue-message: #4f94cd !default;
 $blue-light: #86C2FF !default;
@@ -28,7 +35,7 @@ $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
 
 
-$primary:       $lightred !default;
+$primary:       $lcgreen !default;
 $secondary:     $gray-400 !default;
 $success:       $green !default;
 $info:          $blue !default;
@@ -40,6 +47,9 @@ $dark:          $gray-800 !default;
 // Custom Gradients
 
 $orangegrad: linear-gradient(to right,#ef3300 0%,#f77416 30%,#f7892a 56%,#f4520c 83%,#d22904 100%) !default;
+$bluegrad: linear-gradient(to right, $lcblue 0%, $lclightblue 50%, $lcblue 100%) !default;
+$greengrad:  linear-gradient(to right, $lcgreen 0%, $lclightgreen 50%, $lcgreen 100%) !default;
+$purplegrad:  linear-gradient(to right, $lcpurple 0%, $lclightpurple 50%, $lcpurple 100%) !default;
 //$darkgrad: linear-gradient(60deg, #29323c 0%, #485563 100%) !default; //grey blue
 //$darkgrad: linear-gradient(60deg, #042A3B 0%, #485563 100%) !default; //green
 //$darkgrad: linear-gradient(60deg, #042A3B 0%, #042A48 100%) !default; //blue

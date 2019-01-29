@@ -487,7 +487,7 @@ div.message.d-flex.row-fluid > div.content.left {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-image-source: $orangegrad;
+    border-image-source: $greengrad;
     border-image-slice: 1;
 }
 
@@ -639,7 +639,7 @@ div.message.d-flex.row-fluid > div.content.left {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-image-source: $orangegrad;
+    border-image-source: $greengrad;
     border-image-slice: 1;
 
 }
@@ -728,7 +728,7 @@ h1.site-name > a:hover {
 }
 
 .lec-brand {
-    background-image: $orangegrad;
+    background-image: $greengrad;
     height:95px;
     display: flex;
     flex-flow: row nowrap;
@@ -741,7 +741,7 @@ h1.site-name > a:hover {
 .lec-navbar {
     text-align: center;
     padding-bottom:5px;
-    background: $orangegrad left bottom no-repeat; 
+    background: $greengrad left bottom no-repeat; 
     background-size:100% 5px;
 
 }
