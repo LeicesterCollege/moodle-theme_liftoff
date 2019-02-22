@@ -13,7 +13,7 @@ $gray-900: #2B3036 !default;
 $black:    rgba(0,0,0,.15) !default;
 $card-black: rgba(0,0,0,.125) !default;
 
-$lcblue: rgba(0, 154, 200, 1) !default;
+$lcblue: #007DA3 !default; //rgba(0, 154, 200, 1) !default;
 $lclightblue: rgba(116, 201, 227, 1) !default;
 $lcturq: rgba(0, 154, 155, 1) !default;
 $lcpurple: rgba(109,28,116,1) !default;
@@ -35,7 +35,7 @@ $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
 
 
-$primary:       $lcgreen !default;
+$primary:       $lcblue !default;
 $secondary:     $gray-400 !default;
 $success:       $green !default;
 $info:          $blue !default;

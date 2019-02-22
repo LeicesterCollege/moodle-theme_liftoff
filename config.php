@@ -34,6 +34,8 @@ require_once(__DIR__ . '/lib.php');
 // as the directory name for our theme.                                                                                             
 $THEME->name = 'liftoff';
 
+//Dashboard layout
+
 $THEME->layouts['mydashboard'] = [
         'file' => 'dashboard.php',
         'regions' => ['side-pre'],
