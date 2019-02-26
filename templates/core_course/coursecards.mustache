@@ -35,55 +35,19 @@
 }}
 
 
-
-<!--<div class="marketing-tiles card-columns" role="list">
+ <div class="card-deck dashboard-card-deck {{$classes}}{{/classes}}" role="list">
 {{#courses}}
-    <div class="card" role="listitem"
+    <div class="card dashboard-card lec-dashboard-card" role="listitem"
         data-region="course-content"
         data-course-id="{{{id}}}">
-        <a href="{{viewurl}}" tabindex="-1">
-            <img class="card-img dashboard-card-img" src="{{{courseimage}}}">
-        </a>
-
-        <div class="card-img-overlay" d="course-info-container-{{id}}-{{uniqid}}">
-            <div class="d-flex align-items-start lec-card-title">
-                <a href="{{viewurl}}" class="coursename text-truncate">
-                    <span class="sr-only">
-                        {{#str}}aria:courseshortname, core_course{{/str}}
-                    </span>
-                    {{#showshortname}}
-                    <div class="text-muted muted w-100 mb-1 text-truncate">
-                        {{{shortname}}}
-                    </div>
-                    {{/showshortname}}
-                    {{> core_course/favouriteicon }}
-                    <span class="sr-only">
-                        {{#str}}aria:coursename, core_course{{/str}}
-                    </span>
-                    {{$coursename}}{{/coursename}}
-                </a>
-                {{$menu}}{{/menu}}
-            </div>
-        </div>
-        {{$progress}}{{/progress}}
-    </div>
-{{/courses}}
-</div>-->
-
-
-<div class="card-deck dashboard-card-deck {{$classes}}{{/classes}}" role="list">
-{{#courses}}
-    <div class="card dashboard-card" role="listitem"
-        data-region="course-content"
-        data-course-id="{{{id}}}">
-        <a href="{{viewurl}}" tabindex="-1">
+        <a href="{{viewurl}}" tabindex="-1" class="lec-card-link">
             <div class="card-img dashboard-card-img" style='background-image: url("{{{courseimage}}}");'>
                 <span class="sr-only">{{#str}}aria:courseimage, core_course{{/str}}</span>
             </div>
         </a>
-        <div class="card-body pr-1 course-info-container" id="course-info-container-{{id}}-{{uniqid}}">
-            <div class="d-flex align-items-start">
-                <a href="{{viewurl}}" class="coursename mr-2 text-truncate">
+        <div class="card-img-overlay lec-card-title course-info-container" id="course-info-container-{{id}}-{{uniqid}}">
+            <div class="lec-card-title-text d-flex align-items-start">
+                <a href="{{viewurl}}" class="coursename lec-coursename mr-2 text-truncate">
                     <span class="sr-only">
                         {{#str}}aria:courseshortname, core_course{{/str}}
                     </span>

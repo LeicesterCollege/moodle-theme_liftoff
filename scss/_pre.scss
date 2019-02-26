@@ -13,7 +13,7 @@ $gray-900: #2B3036 !default;
 $black:    rgba(0,0,0,.15) !default;
 $card-black: rgba(0,0,0,.125) !default;
 
-$lcblue: #007DA3 !default; //rgba(0, 154, 200, 1) !default;
+$lcblue: rgba(0, 154, 200, 1) !default; //#007DA3 !default; //
 $lclightblue: rgba(116, 201, 227, 1) !default;
 $lcturq: rgba(0, 154, 155, 1) !default;
 $lcpurple: rgba(109,28,116,1) !default;
@@ -48,19 +48,8 @@ $dark:          $gray-800 !default;
 
 $orangegrad: linear-gradient(to right,#ef3300 0%,#f77416 30%,#f7892a 56%,#f4520c 83%,#d22904 100%) !default;
 $bluegrad: linear-gradient(to right, $lcblue 0%, $lclightblue 50%, $lcblue 100%) !default;
-$greengrad:  linear-gradient(to right, $lcgreen 0%, $lclightgreen 50%, $lcgreen 100%) !default;
-$purplegrad:  linear-gradient(to right, $lcpurple 0%, $lclightpurple 50%, $lcpurple 100%) !default;
-//$darkgrad: linear-gradient(60deg, #29323c 0%, #485563 100%) !default; //grey blue
-//$darkgrad: linear-gradient(60deg, #042A3B 0%, #485563 100%) !default; //green
-//$darkgrad: linear-gradient(60deg, #042A3B 0%, #042A48 100%) !default; //blue
-//$darkgrad: linear-gradient(60deg, #525252 0%, #3d72b4 100%) !default; //light blue
 $darkgrad: linear-gradient(60deg, #360033 0%, #0b8793 100%) !default; //purple
-//$darkgrad: linear-gradient(60deg, #485563 0%, #29323c 100%) !default; //grey blue 2
-//$darkgrad: linear-gradient(60deg, #7474bf 0%, #348ac7 100%) !default; //stellar
-//$darkgrad: linear-gradient(60deg, #16222a 0%, #3a6073 100%) !default; //mirage
-//$darkgrad: linear-gradient(60deg, #0f2027 0%, #203a43 50%, #2c5364 100%) !default; //moonlight
-//$darkgrad: linear-gradient(60deg, #007fa3 0%, #027272 100%) !default; //college brue/turq with black
-//$darkgrad: linear-gradient(60deg, #006d8c 0%, #026868 100%) !default; //college brue/turq with black more
+
 
 // Options
 $enable-rounded: false !default;
