@@ -95,4 +95,20 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('theme_liftoff/dashboard_header', $header);
     }
 
+    /**
+     * Wrapper for frontpage header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function frontpage_header() {
+        global $PAGE, $SITE, $COURSE;
+
+        $header = new stdClass();
+        $header->sitename = format_string($SITE->fullname, true, array('context' => context_course::instance(SITEID)));
+        $header->logosrc = $this->get_logo_url(null, 150);
+        $header->summary = $COURSE->summary;
+        $header->settingsmenu = $this->context_header_settings_menu();
+        return $this->render_from_template('theme_liftoff/frontpage_header', $header);
+    }
+
 }
