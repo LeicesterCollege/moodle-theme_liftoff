@@ -108,6 +108,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->logosrc = $this->get_logo_url(null, 150);
         $header->summary = $COURSE->summary;
         $header->settingsmenu = $this->context_header_settings_menu();
+        //not currently needed $header->loggedin = isloggedin() ? TRUE : FALSE;
+
         return $this->render_from_template('theme_liftoff/frontpage_header', $header);
     }
 
