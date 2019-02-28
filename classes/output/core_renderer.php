@@ -113,4 +113,24 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('theme_liftoff/frontpage_header', $header);
     }
 
+    /**
+     * Wrapper for frontpage header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function liftoff_course_header() {
+        global $PAGE, $COURSE;
+
+        $header = new stdClass();
+        $header->fullname = $COURSE->fullname;
+        $header->summary = $COURSE->summary;
+        
+        $header->summaryexists = empty($header->summary) ? false : true;
+        
+        $header->navbar = $this->navbar();
+        $header->settingsmenu = $this->context_header_settings_menu();
+
+        return $this->render_from_template('theme_liftoff/liftoff_course_header', $header);
+    }
+
 }

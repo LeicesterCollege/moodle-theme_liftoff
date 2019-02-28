@@ -7,32 +7,15 @@ ol li:last-child {
     margin-bottom:10px;
 }
 
-.card-columns {
- @include media-breakpoint-only(sm) {
-    column-count: 2;
-  }
-  @include media-breakpoint-only(md) {
-    column-count: 2;
-  }
-  @include media-breakpoint-only(lg) {
-    column-count: 3;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 4;
-  }
-}
-
 .lec-notloggedin {
     display: none;
 }
-
-#page-site-index.notloggedin .generalbox {display:none;}
 
 .lec-logo {
     margin: 15px;
 }
 
-.lec-frontpage-container {
+.lec-container {
     margin-top:18px;
     margin-bottom: 1rem;
 }
@@ -50,6 +33,15 @@ h1.site-name {
 
     small {
         font-size: 50%;
+    }
+}
+
+.breadcrumb {
+    &:first-child::before {
+        font-family: "FontAwesome";
+        font-weight: 400;
+        content: "\f041";
+        margin-right:5px;
     }
 }
 
@@ -640,7 +632,7 @@ div.message.d-flex.row-fluid > div.content.left {
 }
 
 .message-drawer .body-container {
-    background-image: $darkgrad;
+    background-image: $darkgradup;
 }
 
 [data-region="header-edit-mode"] .close {
@@ -922,52 +914,6 @@ div[aria-labelledby="courseMenu"] > a[title="Dashboard"] {
     padding-top:6px;
 }
 
-/******** COURSE *********************************/
-
-
-//Course summary section
-.course-content ul.topics li.section .summary {
-    margin-left:10px;
-    margin-right: 10px;
-}
-
-//Label indent
-.section .label .mod-indent-outer {
-    padding-left: 0px;
-}
-
-//activity description
-.section .activity .contentafterlink {
-    font-size: $font-size-sm;
-
-    margin-top: .5em;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: .8em;
-
-    background-color: $gray-100;
-    padding: 6px;
-    border: 1px solid $gray-400;
-    border-radius: $card-border-radius;
-    text-decoration: italic;
-
-}
-
-.section .activity .contentafterlink>div {
-    margin-left:17px;
-}
-
-.section .activity div.contentafterlink > div > div {
-    font-style: italic;
-}
-
-.section .activity .contentafterlink::before {
-    font-family: "FontAwesome";
-    font-weight: 400;
-    content: "\f05a";
-    float:left;
-}
-
 /*********************************************/
 
 .filemanager-container,
@@ -989,7 +935,7 @@ div[aria-labelledby="courseMenu"] > a[title="Dashboard"] {
     transition: border 1s;
 }
 
-/***************** TO make old Moodle pages work ********************/
+/***************** TO make old Leicester College Moodle pages work - make a preset at some point ********************/
 div#staffdev > ul {
   display: -webkit-flex;
     display: flex;
@@ -1087,46 +1033,6 @@ div#staffdev > ul> li a:hover:after {
 .usertext { 
   display:none;
 }
-
-.spot-container {
-    height:120px;
-    white-space: nowrap;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    overflow-scrolling: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
-    -webkit-box-flex: 1;
-    font-size: 0; //stupid patch for inline-block spacing  stupidity
-    padding-bottom: 10px;
-
-    &:hover, &:focus {
-        overflow-x: auto;
-        margin-bottom: 0px;
-    }
-  
-    .spot {
-        max-width:200px;
-        position:relative;
-        display:inline-block;
-        border:2px solid blue;
-        margin:0 10px 0 0;
-    }
-
-    .card-img-overlay {
-        padding:0.25rem;
-    }
-
-    .card-text {
-        position:absolute;
-        bottom:0px;
-        padding:0;
-        margin:0;
-    }
-}
-
-
-
 
 /* H5P regression fix for editor https://moodle.org/mod/forum/discuss.php?d=347602#p1402801 */
 @media (min-width:544px) {

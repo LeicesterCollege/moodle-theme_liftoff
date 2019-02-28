@@ -52,6 +52,16 @@ $THEME->layouts['frontpage'] = [
         'options' => ['nonavbar' => true, 'langmenu' => true],
     ];
 
+//Course layout
+
+$THEME->layouts['course'] = [
+        'file' => 'course.php',
+        'regions' => ['side-pre'],
+        'defaultregion' => 'side-pre',
+        'options' => ['nonavbar' => true, 'langmenu' => true],
+    ];
+
+
 $THEME->hidefromselector = false;                                                                                                             
  
 // This setting list the style sheets we want to include in our theme. Because we want to use SCSS instead of CSS - we won't        

@@ -34,6 +34,7 @@ $green:   #5cb85c !default;
 $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
 
+$brand-primary: $lcblue;
 
 $primary:       $lcblue !default;
 $secondary:     $gray-400 !default;
@@ -49,6 +50,7 @@ $dark:          $gray-800 !default;
 $orangegrad: linear-gradient(to right,#ef3300 0%,#f77416 30%,#f7892a 56%,#f4520c 83%,#d22904 100%) !default;
 $bluegrad: linear-gradient(to right, $lcblue 0%, $lclightblue 50%, $lcblue 100%) !default;
 $darkgrad: linear-gradient(60deg, #360033 0%, #0b8793 100%) !default; //purple
+$darkgradup: linear-gradient(to top, #360033 0%, #0b8793 100%) !default; //purple
 
 
 // Options

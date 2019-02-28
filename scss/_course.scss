@@ -1,0 +1,167 @@
+.lec-course-fullname {
+
+    font-size: 2rem;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.lec-course-header {
+    background-color: $dropdown-background-shade;
+    background-image: none !important;
+    border:none;
+    color:$white;
+    padding: 10px 0px 10px 0px;
+}
+
+.lec-no-progress {
+    width:100%;
+    font-size: 0.7875rem;
+}
+
+.path-course-view .completionprogress {
+    float:none;
+}
+
+#page-course-view-topics {
+    &.editing {
+        .course-content .topics .section {
+            width: calc(100% - 20px);
+        }
+    }
+
+    .section .activity .contentwithoutlink > a,
+    .section .activity .activityinstance > a {
+        display: initial;
+    }
+
+    .course-content {
+        .topics {
+            #section-0 {
+                border: none;
+            }
+            .section {
+                border: none;
+
+                .summary {
+                    margin-left:10px;
+                    margin-right: 10px;
+                }
+
+                .activity.label {
+                    margin: 0;
+
+                    .mod-indent-outer {
+                        display: block;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 1px;
+                }
+
+                .card {
+                    display: block;
+
+                    .inline-card {
+                        display: block;
+                    }
+
+                    .content {
+                        display: block;
+                        width: 100%;
+
+
+                        .section-title {
+                            text-align: center;
+                            background-color: $gray-100;
+                            margin-top: 0;
+                            margin-left: 0;
+                            margin-right: 0;
+                            margin-bottom: 10px;
+                            padding:5px;
+                        }
+
+                        .section-summary-activities {
+                            font-size: 75%;
+
+                            .progress {
+                                background-color: $gray-400;
+                                
+                                .progress-bar {
+                                    padding-top: 6px;
+                                    padding-bottom: 6px;
+                                }
+                            }
+
+                        }
+
+                        .availabilityinfo {
+                            margin-top:10px;
+                        }
+                    }
+                }
+
+                .activity-count {
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .single-section .sectionname,
+        .section .sectionname {
+            letter-spacing: .1em;
+            font-weight: 700;
+            text-align: center;
+            background-color: $gray-100;
+            width:100%;
+            padding-top: 17px;
+            padding-bottom: 17px;
+
+        }
+    }
+
+}
+
+//Label indent
+.section .label .mod-indent-outer {
+    padding-left: 0px;
+}
+
+//activity description
+.section .activity .contentafterlink {
+    font-size: $font-size-sm;
+
+    margin-top: .5em;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: .8em;
+
+    background-color: $gray-100;
+    padding: 6px;
+    border: 1px solid $gray-400;
+    border-radius: $card-border-radius;
+    text-decoration: italic;
+
+}
+
+.section .activity .contentafterlink>div {
+    margin-left:17px;
+}
+
+.section .activity div.contentafterlink > div > div {
+    font-style: italic;
+}
+
+.section .activity .contentafterlink::before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f05a";
+    float:left;
+}

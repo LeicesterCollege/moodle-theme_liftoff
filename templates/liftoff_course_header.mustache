@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template liftoff/dashboard_header
+    @template liftoff/liftoff_course_header
 
     This template renders the header.
 
@@ -24,21 +24,23 @@
         "pageheadingbutton": "page_heading_button_html"
     }
 
-    Page header.
+    Course header.
 }}
 <div class="container-fluid lec-container">
     <header class="row justify-content-between lec-course-header">
-        <div class="col-6">
+        <div class="col-10">
             <div class="row-fluid">
                 <div class="lec-align">
-                    <h1 class="lec-course-fullname d-none d-inline-block">Dashboard</h1>
+                    <h1 class="lec-course-fullname d-none d-inline-block"><a href="{{{ config.wwwroot }}}">{{{ fullname }}} </a></h1>
+                    {{#summaryexists}}<div class="lec-course-summary">{{{summary}}}</div>{{/summaryexists}}
                 </div>
             </div>
         </div>
-        <div id="course-header" class="col-6">
+        <div id="course-header" class="col-2">
             <div class="pull-right">
-                {{{pageheadingbutton}}}
+                {{{settingsmenu}}}
             </div>
         </div>
     </header>
+    <div class="row mt-3 card pt-2 pb-0 pl-2 pr-2">{{{navbar}}}</div>
 </div>
