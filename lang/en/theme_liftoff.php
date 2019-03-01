@@ -59,3 +59,4 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 //Course module progress
 $string['discipline_progress'] = "Progress";
+$string['showhideblocks'] = "Show/Hide Blocks";

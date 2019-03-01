@@ -1,0 +1,118 @@
+#sidepreopen-control,
+[data-region="blocks-column"] {
+    -webkit-transition: right .5s ease, left .5s ease;
+    -moz-transition: right .5s ease, left .5s ease;
+    -o-transition: right .5s ease, left .5s ease;
+    transition: right .5s ease, left .5s ease;
+
+    .dropdown-menu {
+        min-width: 285px;
+
+        .dropdown-item {
+            white-space: initial;
+        }
+    }
+}
+
+#sidepreopen-control {
+    background-color: $brand-primary;
+    position: fixed;
+    right: -15px;
+    top: 50%-20px;
+    color: $white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 8px 0 0 4px;
+    cursor: pointer;
+
+    &:before {
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: "FontAwesome";
+        content: "\f104";
+        padding:7px;
+        position: absolute;
+        top: 3px;
+    }
+
+    &:hover {
+        background-color: darken($brand-primary, 10%);
+    }
+}
+
+[data-region="blocks-column"] {
+    width: 285px;
+    padding:20px;
+    background-color: #fff;
+    position: fixed;
+    top: 55px;
+    right: -285px;
+    height: calc(100% - 55px);
+    overflow-y: scroll;
+    z-index: 999;
+    background-image: $darkgradup;
+}
+
+body.drawer-open-right {
+    #sidepreopen-control {
+        right: 265px;
+
+        &:before {
+            font-family: "FontAwesome";
+            content: "\f105";
+            position: absolute;
+            top: 3px;
+
+        }
+    }
+
+    [data-region="blocks-column"] {
+        right: 0;
+
+            /* width */
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-image: $darkgradup;
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $brand-primary; 
+      border-radius: $card-border-radius-thick;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: darken($brand-primary, 15%); 
+    }
+
+        aside.block {
+            border: none;
+            border-radius: 0;
+        }
+    }
+}
+
+
+//Reset for Dashboard layout which uses the standard blocks
+.lec-dashboard-blocks {
+    width: 360px;
+    float: right;
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    position: unset;
+    overflow-y: unset;
+}
