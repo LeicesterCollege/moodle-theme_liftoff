@@ -12,6 +12,10 @@
     }
 }
 
+.breadcrumb-item {
+    font-size: 90%;
+}
+
 .lec-course-header {
     background-color: $dropdown-background-shade;
     background-image: none !important;
@@ -164,4 +168,8 @@
     font-weight: 400;
     content: "\f05a";
     float:left;
+}
+
+#region-main-settings-menu {
+    float: right;
 }

@@ -61,6 +61,13 @@ $THEME->layouts['course'] = [
         'options' => ['nonavbar' => true, 'langmenu' => true],
     ];
 
+$THEME->layouts['incourse'] = [
+        'file' => 'incourse.php',
+        'regions' => ['side-pre'],
+        'defaultregion' => 'side-pre',
+        'options' => ['nonavbar' => true, 'langmenu' => true],
+    ];
+
 
 $THEME->hidefromselector = false;                                                                                                             
  

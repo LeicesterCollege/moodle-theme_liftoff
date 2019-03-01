@@ -45,6 +45,9 @@ h1.site-name {
     }
 }
 
+.mod-indent-outer {
+    width:100%;
+}
 
 .lec-frontpage-grid {
   display: grid;
@@ -731,6 +734,30 @@ div.message.d-flex.row-fluid > div.content.left {
     border-image-source: $bluegrad;
     border-image-slice: 1;
 
+}
+.dropdown-item .subscriptionmode {
+    color:$navbar-dark-text-color;
+
+    &:before {
+        font-family: "FontAwesome";
+        font-weight: 400;
+        content: "\f0e6";
+        margin-right:5px;
+    }
+}
+.dropdown-item .activesetting {
+    color:$navbar-dark-text-color;
+    border-bottom: 3px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-image-source: $bluegrad;
+    border-image-slice: 1;
+    color:$navbar-dark-text-color;
+}
+
+#page-mod-forum-discuss .discussioncontrols .form-inline input {
+    margin-top: 0px;
 }
 
 h1.site-name { 

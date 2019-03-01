@@ -114,7 +114,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
     /**
-     * Wrapper for frontpage header elements.
+     * Wrapper for course header elements.
      *
      * @return string HTML to display the main header.
      */
@@ -124,6 +124,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header = new stdClass();
         $header->fullname = $COURSE->fullname;
         $header->summary = $COURSE->summary;
+        $header->courseid = $COURSE->id;
         
         $header->summaryexists = empty($header->summary) ? false : true;
         
@@ -131,6 +132,22 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->settingsmenu = $this->context_header_settings_menu();
 
         return $this->render_from_template('theme_liftoff/liftoff_course_header', $header);
+    }
+
+    /**
+     * Wrapper for course header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function liftoff_incourse_header() {
+        global $PAGE, $COURSE;
+
+        $header = new stdClass();
+        $header->fullname = $COURSE->fullname;
+        $header->courseid = $COURSE->id;
+        $header->navbar = $this->navbar();
+
+        return $this->render_from_template('theme_liftoff/liftoff_incourse_header', $header);
     }
 
 }
