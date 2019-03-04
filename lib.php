@@ -73,9 +73,9 @@ function theme_liftoff_get_main_scss_content($theme) {
     }                                                                                                                                       
  
     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.                                        
-    $pre = file_get_contents($CFG->dirroot . '/theme/photo/scss/pre.scss');                                                         
+    $pre = file_get_contents($CFG->dirroot . '/theme/liftoff/scss/pre.scss');                                                         
     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.                                    
-    $post = file_get_contents($CFG->dirroot . '/theme/photo/scss/post.scss');                                                       
+    $post = file_get_contents($CFG->dirroot . '/theme/liftoff/scss/post.scss');                                                       
  
     // Combine them together.                                                                                                       
     return $pre . "\n" . $scss . "\n" . $post;                                                                                                                                   

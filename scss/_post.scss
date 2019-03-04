@@ -91,6 +91,7 @@ h1.site-name {
 .lec-frontpage-header {
     background-color: $dropdown-background-shade;
     background-image: none !important;
+    border-radius: $card-border-radius;
     border:none;
     color:$white;
     padding: 10px 0px 10px 0px;
