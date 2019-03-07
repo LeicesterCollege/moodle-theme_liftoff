@@ -67,14 +67,6 @@ h1.site-name {
     margin-bottom: 0px !important;
 }
 
-.dashboard-card {
-    border:none;   
-}
-
-.dashboard-card-deck {
-    margin-bottom: 15px;
-}
-
 .lec-coursename {
     padding: 0.3rem;
     background-color: transparent;
@@ -97,34 +89,17 @@ h1.site-name {
     padding: 10px 0px 10px 0px;
 }
 
-.lec-dashboard-header {
-    border-radius: $card-border-radius;
-    border: 1px solid $card-black;
-    background-color: $white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 10px 0px 10px 0px;
-}
-
 .lec-card-title-text > .dropdown > .coursemenubtn {
     margin-top: 0 !important;
 }
 
-.dashboard-card-footer {
-    padding: .75rem 1.25rem !important;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: transparent !important;
-    transition: background-color 0.2s ease;
-    color: $gray-900;
+break {
+  flex-basis: 100%;
+  width: 0px; 
+  height: 0px; 
+  overflow: hidden;
 }
 
-.dashboard-card-footer:hover {
-    background-color: rgba($white, 0.8);
-    border-radius: $card-border-radius;
-    transition: background-color 0.5s ease;
-}
 
 .card-img { 
     max-height:120px;
@@ -154,11 +129,6 @@ h1.site-name {
     display: none;
      visibility: hidden;
 }
-
-// .list-group-item[data-key="home"] {
-//     display: none;
-//      visibility: hidden;
-// }
 
 .page-context-header, .media {
     display: flex;
@@ -530,75 +500,11 @@ div.message.d-flex.row-fluid > div.content.left {
     width:75px;
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-    width:100%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 .bg-dark {
     background-color: rgba(68,68,68, 1) !important;
 }
-.navbar .nav-link, .navbar .dropdown-toggle {
-    color:$navbar-dark-text-color;
-    margin-right:15px;
-}
-.navbar .nav-link:hover, .navbar .dropdown-toggle#hover {
-    color:$navbar-dark-hover-text-color;
-}
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: $dropdown-background-shade;
-}
-
-.navbar .popover-region {
-    height:50px;
-}
-
-.navbar .popover-region-toggle {
-    padding-top: 12px;
-}
-
-.dropdown-item, .dropdown-item[data-title="mymoodle,admin"], .dropdown-item:focus {
-    color:$navbar-dark-text-color;
-    background-color: $dropdown-background-shade;
-}
-.dropdown-item a {
-    color:$navbar-dark-text-color;
-}
-.dropdown-item a:hover {
-    text-decoration: none;
-}
-.dropdown-item:hover {
-    color:$navbar-dark-text-color;
-    background-color:$navbar-dark-background-hover-shade;
-    border-color: $navbar-dark-background-hover-shade;
-}
-
-.dropdown-item.active {
-    border-bottom: 3px solid;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-image-source: $bluegrad;
-    border-image-slice: 1;
-}
-
-.dropdown-menu {
-    border-radius: 0px $card-border-radius $card-border-radius $card-border-radius;
-    background-color: $dropdown-background-shade;
-}
-.dropdown-menu-right {
-    border-radius: $card-border-radius 0px $card-border-radius $card-border-radius;
-}
-
-
-.dropdown-divider {
-    border-top:1px solid $navbar-dark-background-hover-shade;
-}
-
-.usermenu {
-}
+//Message Drawer
 
 .message-drawer a, .message-drawer .btn-link {
     color: $navbar-dark-text-color;
@@ -703,6 +609,8 @@ div.message.d-flex.row-fluid > div.content.left {
     background-color: $navbar-dark-text-color;
 }
 
+//Nav Drawer
+
 #nav-drawer a.list-group-item:first-child  {
     border-radius: $card-border-radius $card-border-radius 0px 0px;
 }
@@ -736,6 +644,8 @@ div.message.d-flex.row-fluid > div.content.left {
     border-image-slice: 1;
 
 }
+
+//Other Dropdowns
 .dropdown-item .subscriptionmode {
     color:$navbar-dark-text-color;
 
@@ -822,57 +732,6 @@ h1.site-name > a:hover {
     border: none !important;
 }
 
-.lec-toggle {
-    //background-color: $navbar-dark-background-hover-shade;
-    color: $navbar-dark-text-color;
-    //border-radius: 50%;
-    border-style:none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-.lec-course-menu {
-    column-count: 2;
-    column-rule-style: solid;
-    column-rule: 1px solid $navbar-dark-background-hover-shade;
-}
-
-[data-region="drawer-toggle"] {
-    color: $navbar-dark-text-color;
-    cursor: pointer;
-}
-
-.lec-brand {
-    background-image: $bluegrad;
-    height:95px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    position: relative;
-    cursor: pointer;
-    color: $navbar-dark-text-color;
-}
-
-.lec-navbar {
-    text-align: center;
-    padding-bottom:5px;
-    background: $bluegrad left bottom no-repeat; 
-    background-size:100% 5px;
-
-}
-
-[data-region="drawer-toggle"]:hover {
-    color:$white;
-}
-
-.lec-brand > a > span > img {
-    max-height: 95px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    margin-left: 20px;
-}
 
 div.context-header-settings-menu {
     margin-left:10px;
@@ -910,14 +769,6 @@ a.dropdown-toggle {
     padding-bottom: 0px;
 }
 
-.navbar-dark a .icon, .navbar-dark .navbar-nav .nav-link {
-    color: $navbar-dark-text-color !important;
-
-    &:hover {
-        color: $navbar-dark-hover-text-color !important;
-    }
-}
-
 .action-menu-item a:first-of-type > .icon {
     color: $white;
     padding-top: 6px;
@@ -948,124 +799,3 @@ div[aria-labelledby="courseMenu"] > a[title="Dashboard"] {
 .filepicker-filelist {
     @extend .border;
 }
-
-.navbar .userpicture {
-    height:36px;
-}
-.userpicture {
-    border-radius: 50%;
-    border: 1px none $gray-200;
-    transition: border 1s;
-}
-.userpicture:hover {
-    border-radius: 50%;
-    border: 2px solid $gray-400;
-    transition: border 1s;
-}
-
-/***************** TO make old Leicester College Moodle pages work - make a preset at some point ********************/
-div#staffdev > ul {
-  display: -webkit-flex;
-    display: flex;
-     -webkit-flex-direction: row;
-    flex-direction: row;
-    flex-wrap: wrap;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-
-    padding: 0;
-    margin-top:15px;
-    margin-bottom:0px;
-    margin-right:20px;
-    list-style-type: none;
-
-}
-div#staffdev > ul> li { 
-    line-height: 1.22em; font-size: 12pt;
-    width:200px;
-    max-width: 200px;
-    flex-grow:1;
-    color: black;
-    text-align: center;
-    align-self: flex-start; 
-    margin-left: 8px; 
-    margin-right: 8px;
-    margin-top:10px;
-}
-div#staffdev > ul> li:last-child {
-  margin-right:0;
-}
-div#staffdev > ul> li a { 
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    max-width: 220px;
-}
-div#staffdev > ul> li a > span { 
-    text-transform: none;
-}
-div#staffdev > ul> li a:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 3px;
-    width: 0px;
-    background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-}
-div#staffdev > ul> li a:hover:after {
-    width: 100%;
-    background: black;
-}
-
-.staffportal-head {
-  text-align: center; margin-top: 50px; margin-left: auto; margin-right: auto; font-family: '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif; line-height: 1.22em; font-size: 36pt;
-}
-.staffportal-p {
- line-height: 1.22em; font-size: 18pt;
-}
-.center-txt {
-  text-align: center;
-}
-.videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-}
-.videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.ab_links {
-    cursor: pointer; color: #ee3300;
-}
-.ab_links:hover {
-    text-decoration:underline;
-}
-.expand_image_link {
-    cursor:pointer; 
-}
-.my_tabs ul {
-    margin:0px; padding:0px; display:inline-block;  
-}
-.my_tabs li {
-    display:inline-block;
-    margin:0px; padding:0px;
-}
-.usertext { 
-  display:none;
-}
-
-/* H5P regression fix for editor https://moodle.org/mod/forum/discuss.php?d=347602#p1402801 */
-@media (min-width:544px) {
-    .form-inline .form-control-static {
-        display: block!important;
-    }
-}
-/* End H5P */

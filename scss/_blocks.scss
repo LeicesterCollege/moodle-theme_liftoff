@@ -6,7 +6,7 @@
     transition: right .5s ease, left .5s ease;
 
     .dropdown-menu {
-        min-width: 285px;
+        min-width: 295px;
 
         .dropdown-item {
             white-space: initial;
@@ -49,12 +49,12 @@
 }
 
 [data-region="blocks-column"] {
-    width: 285px;
+    width: 295px;
     padding:20px;
     background-color: #fff;
     position: fixed;
     top: 55px;
-    right: -285px;
+    right: -295px;
     height: calc(100% - 55px);
     overflow-y: scroll;
     z-index: 999;
@@ -63,7 +63,7 @@
 
 body.drawer-open-right {
     #sidepreopen-control {
-        right: 265px;
+        right: 275px;
 
         &:before {
             font-family: "FontAwesome";

@@ -1,0 +1,106 @@
+/***************** TO make old Leicester College Moodle pages work - make a preset at some point ********************/
+div#staffdev > ul {
+  display: -webkit-flex;
+    display: flex;
+     -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    padding: 0;
+    margin-top:15px;
+    margin-bottom:0px;
+    margin-right:20px;
+    list-style-type: none;
+
+}
+div#staffdev > ul> li { 
+    line-height: 1.22em; font-size: 12pt;
+    width:200px;
+    max-width: 200px;
+    flex-grow:1;
+    color: black;
+    text-align: center;
+    align-self: flex-start; 
+    margin-left: 8px; 
+    margin-right: 8px;
+    margin-top:10px;
+}
+div#staffdev > ul> li:last-child {
+  margin-right:0;
+}
+div#staffdev > ul> li a { 
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    max-width: 220px;
+}
+div#staffdev > ul> li a > span { 
+    text-transform: none;
+}
+div#staffdev > ul> li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+div#staffdev > ul> li a:hover:after {
+    width: 100%;
+    background: black;
+}
+
+.staffportal-head {
+  text-align: center; margin-top: 50px; margin-left: auto; margin-right: auto; font-family: '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif; line-height: 1.22em; font-size: 36pt;
+}
+.staffportal-p {
+ line-height: 1.22em; font-size: 18pt;
+}
+.center-txt {
+  text-align: center;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ab_links {
+    cursor: pointer; color: #ee3300;
+}
+.ab_links:hover {
+    text-decoration:underline;
+}
+.expand_image_link {
+    cursor:pointer; 
+}
+.my_tabs ul {
+    margin:0px; padding:0px; display:inline-block;  
+}
+.my_tabs li {
+    display:inline-block;
+    margin:0px; padding:0px;
+}
+.usertext { 
+  display:none;
+}
+
+/* H5P regression fix for editor https://moodle.org/mod/forum/discuss.php?d=347602#p1402801 */
+@media (min-width:544px) {
+    .form-inline .form-control-static {
+        display: block!important;
+    }
+}
+/* End H5P */

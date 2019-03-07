@@ -11,6 +11,11 @@
 @import "../../boost/scss/moodle";
 
 //import custom post main
+@import "navbar";
 @import "blocks";
 @import "course";
 @import "post";
+@import "dashboard";
+
+//Old Leicester College Styles than are to stop old content breaking
+@import "lec";

@@ -1,0 +1,20 @@
+.dashboard-card {
+    border:none;   
+}
+
+.dashboard-card-deck {
+    margin-bottom: 15px;
+}
+
+.dashboard-card-img { 
+  min-height: 140px; 
+}
+
+.dashboard-card-footer {
+    padding: .75rem 1.25rem !important;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    background: transparent !important;
+    color: $gray-900;
+}

@@ -1,0 +1,122 @@
+.lec-navbar {
+    text-align: center;
+    padding-bottom:5px;
+    background: $bluegrad left bottom no-repeat; 
+    background-size:100% 5px;
+
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+    width:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-dark a .icon, .navbar-dark .navbar-nav .nav-link {
+    color: $navbar-dark-text-color !important;
+
+    &:hover {
+        color: $navbar-dark-hover-text-color !important;
+    }
+}
+
+//Navbar links and Menus
+
+.lec-toggle {
+    color: $navbar-dark-text-color;
+    border-style:none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+[data-region="drawer-toggle"] {
+    color: $navbar-dark-text-color;
+    cursor: pointer;
+}
+
+[data-region="drawer-toggle"]:hover {
+    color:$white;
+}
+
+.lec-course-menu {
+    column-count: 2;
+    column-rule-style: solid;
+    column-rule: 1px solid $navbar-dark-background-hover-shade;
+}
+
+.navbar .nav-link, .navbar .dropdown-toggle {
+    color:$navbar-dark-text-color;
+    margin-right:15px;
+}
+.navbar .nav-link:hover, .navbar .dropdown-toggle#hover {
+    color:$navbar-dark-hover-text-color;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: $dropdown-background-shade;
+}
+
+.navbar .popover-region {
+    height:50px;
+}
+
+.navbar .popover-region-toggle {
+    padding-top: 12px;
+}
+
+.dropdown-item, .dropdown-item[data-title="mymoodle,admin"], .dropdown-item:focus {
+    color:$navbar-dark-text-color;
+    background-color: $dropdown-background-shade;
+}
+.dropdown-item a {
+    color:$navbar-dark-text-color;
+}
+.dropdown-item a:hover {
+    text-decoration: none;
+}
+.dropdown-item:hover {
+    color:$navbar-dark-text-color;
+    background-color:$navbar-dark-background-hover-shade;
+    border-color: $navbar-dark-background-hover-shade;
+}
+
+.dropdown-item.active {
+    border-bottom: 3px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-image-source: $bluegrad;
+    border-image-slice: 1;
+}
+
+.dropdown-menu {
+    border-radius: 0px $card-border-radius $card-border-radius $card-border-radius;
+    background-color: $dropdown-background-shade;
+}
+.dropdown-menu-right {
+    border-radius: $card-border-radius 0px $card-border-radius $card-border-radius;
+}
+
+
+.dropdown-divider {
+    border-top:1px solid $navbar-dark-background-hover-shade;
+}
+
+//Navbar User Menu, and User Pictures around the site
+
+.navbar .userpicture {
+    height:36px;
+}
+.userpicture {
+    border-radius: 50%;
+    border: 1px none $gray-200;
+    transition: border 1s;
+}
+.userpicture:hover {
+    border-radius: 50%;
+    border: 2px solid $gray-400;
+    transition: border 1s;
+}
