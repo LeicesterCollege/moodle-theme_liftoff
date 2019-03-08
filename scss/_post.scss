@@ -122,8 +122,18 @@ break {
     visibility: hidden;
 }
 .list-group-item[data-type="30"] {
-    display: none;
-     visibility: hidden;
+    // display: none;
+    //  visibility: hidden;
+    .media {
+        padding-left:10px;
+        
+        .media-body {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
 }
 .list-group-item[data-key="mycourses"] {
     display: none;
