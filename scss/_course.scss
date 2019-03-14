@@ -33,6 +33,22 @@
     float:none;
 }
 
+#region-main {
+    .course-content {
+        .content {
+            .section_availability {
+                margin-top: 1rem;
+                text-align: center;
+                margin-bottom: 1rem;
+
+                .tag-info {
+                    background-color: $warning;
+                }
+            }
+        }
+    }
+}
+
 #page-course-view-topics {
     &.editing {
         .course-content .topics .section {
