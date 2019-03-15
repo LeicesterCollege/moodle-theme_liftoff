@@ -121,6 +121,11 @@ break {
     display: none;
     visibility: hidden;
 }
+
+.list-group-item[data-key="courseindexpage"] {
+    display: none;
+    visibility: hidden;
+}
 .list-group-item[data-type="30"] {
     // display: none;
     //  visibility: hidden;
