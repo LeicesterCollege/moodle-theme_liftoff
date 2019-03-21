@@ -41,10 +41,51 @@
     color:$white;
 }
 
+
 .lec-course-menu {
-    column-count: 2;
+    max-width: 500px;
+    column-count: 1;
     column-rule-style: solid;
+    margin-left: -100px;
     column-rule: 1px solid $navbar-dark-background-hover-shade;
+
+    .dropdown-item {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .lec-course-menu {
+        max-width: 600px;
+        column-count: 2;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lec-course-menu {
+        max-width: 900px;
+        column-count: 2;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .lec-course-menu {
+        max-width: 1200px;
+        column-count: 2;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 2560px) {
+    .lec-course-menu {
+        max-width: 2000px;
+        column-count: 3;
+        margin-left: 0;
+    }
 }
 
 .navbar .nav-link, .navbar .dropdown-toggle {

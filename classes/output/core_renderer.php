@@ -64,7 +64,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $branch->add('View all of my courses...', new moodle_url('/my/index.php'), format_string('Dashboard'));
                 foreach ($courses as $course) {
                     if ($course->visible){
-                        $branch->add(format_string($course->fullname), new moodle_url('/course/view.php?id='.$course->id), format_string($course->shortname));
+                        $branch->add(format_string($course->fullname), new moodle_url('/course/view.php?id='.$course->id), format_string($course->fullname));
                     }
                 }
             } else {
