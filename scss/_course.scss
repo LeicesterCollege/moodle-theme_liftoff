@@ -63,6 +63,9 @@
     }
 
     .course-content {
+        .current::before {
+            border-left-width: 5px;
+        }
         .topics {
             #section-0 {
                 border: none;
