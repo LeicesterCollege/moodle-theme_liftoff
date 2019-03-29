@@ -146,6 +146,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->fullname = $COURSE->fullname;
         $header->courseid = $COURSE->id;
         $header->navbar = $this->navbar();
+         $header->settingsmenu = $this->context_header_settings_menu();
 
         return $this->render_from_template('theme_liftoff/liftoff_incourse_header', $header);
     }

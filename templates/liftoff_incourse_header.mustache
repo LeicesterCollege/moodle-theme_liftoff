@@ -28,11 +28,16 @@
 }}
 <div class="container-fluid lec-container">
     <header class="row justify-content-between lec-course-header">
-        <div class="col-12">
+        <div class="col-10">
             <div class="row-fluid">
                 <div class="lec-align">
                     <h1 class="lec-course-fullname d-none d-inline-block"><a href="{{{ config.wwwroot }}}/course/view.php?id={{{courseid}}}">{{{ fullname }}} </a></h1>
                 </div>
+            </div>
+        </div>
+        <div id="course-header" class="col-2">
+            <div class="pull-right">
+                {{{settingsmenu}}}
             </div>
         </div>
     </header>
