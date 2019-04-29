@@ -521,6 +521,80 @@ div.message.d-flex.row-fluid > div.content.left {
 
 }
 
+[data-region="last-message"],
+[data-region="empty-message-container"],
+[data-region="content-container"] {
+    .text-muted {
+        color: $gray-200 !important;
+    }
+}
+
+[data-region="non-contacts-container"],
+[data-region="messages-container"] {
+
+    .list-group-item {
+        background-color: $dropdown-background-shade;
+        color: $white;
+
+        &:hover {
+            background-color: $navbar-dark-background-hover-shade;
+        }
+
+    }
+
+    h4 {
+        color: $white;
+    }
+}
+
+[data-region="view-overview"] {
+    .form-control {
+        background-color: $dropdown-background-shade;
+        color: $white;
+        border-top: 1px solid $gray-700;
+        border-right: 1px solid $gray-700;
+        border-bottom: 1px solid $gray-700;
+
+        &::placeholder {
+            color: $gray-200;
+        }
+    }
+    .input-group-text {
+        background-color: $dropdown-background-shade !important; //overide bg-white bootstrap
+        color: $white;
+        border-top: 1px solid $gray-700;
+        border-left: 1px solid $gray-700;
+        border-bottom: 1px solid $gray-700;
+        border-right: none;
+    }
+}
+
+[data-region="view-search"] {
+    .form-control {
+        background-color: $dropdown-background-shade;
+        color: $white;
+        border-top: 1px solid $gray-700;
+        border-left: 1px solid $gray-700;
+        border-bottom: 1px solid $gray-700;
+        border-right: none;
+        &::placeholder {
+            color: $gray-200;
+        }
+    }
+
+    .input-group-append {
+        background-color: $dropdown-background-shade !important; //overide bg-white bootstrap
+    }
+
+    .btn-outline-secondary {
+        color: $white;
+        border-top: 1px solid $gray-700;
+        border-right: 1px solid $gray-700;
+        border-bottom: 1px solid $gray-700;
+        border-left: none;
+    }
+}
+
 /*----- DARK NAVBAR, DRAWER, MENUS and BANNER---------*/
 
 #action-menu-1-menubar, #action-menu-1-menubar > div {
